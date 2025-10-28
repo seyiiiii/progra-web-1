@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Menú de Prácticas</title>
+<style>
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1b1b1b, #121212);
+  color: #f1f1f1;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* --- TÍTULO CON EFECTO DE GRADIENTE --- */
+h1 {
+  margin-top: 60px;
+  font-size: 2.5em;
+  background: linear-gradient(90deg, #00bcd4, #3f51b5, #00bcd4);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moverColor 4s infinite linear;
+}
+
+@keyframes moverColor {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* --- MENÚ FIJO ABAJO --- */
+nav {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* --- ENLACES DEL MENÚ --- */
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Efecto subrayado animado */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00bcd4;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover: color y subrayado */
+nav a:hover {
+  color: #00bcd4;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --- EFECTO SUTIL DE BRILLO AL PASAR EL MOUSE --- */
+nav a:hover {
+  text-shadow: 0 0 10px #00bcd4;
+}
+</style>
+</head>
+<body>
+
+<h1>Menú de Prácticas</h1>
+
+<nav>
+  <a href="reto1.html" target="_blank">Reto 1</a>
+  <a href="reto2.html" target="_blank">Reto 2</a>
+  <a href="ejercicio3.html" target="_blank">Práctica 3</a>
+  <a href="ejercicio4.html" target="_blank">Práctica 4</a>
+  <a href="ejercicio5.html" target="_blank">Práctica 5</a>
+</nav>
+
+</body>
+</html>
