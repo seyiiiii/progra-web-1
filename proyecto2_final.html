@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* styles.scss */
+
+$primary-color: #009688;
+$font-size: 17px;
+
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+}
+
+// Base styles
+body {
+  font-family: Arial, sans-serif;
+  font-size: $font-size;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Header and Footer styles
+.header, .footer {
+  background-color: lighten($primary-color, 35%);
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1, .footer p {
+  font-size: 2em;
+}
+
+// Main content styles
+main {
+  padding: 20px;
+
+  .about {
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: $font-size;
+    }
+  }
+
+  .features {
+    h2 {
+      font-size: 1.5em;
+    }
+
+    .feature-list {
+      list-style-type: disc;
+      padding-left: 20px;
+
+      li {
+        @include rounded-corners(5px);
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: lighten($primary-color, 50%);
+      }
+    }
+  }
+
+  .example {
+    h2 {
+      font-size: 1.5em;
+    }
+
+    .example-text {
+      @include rounded-corners(10px);
+      padding: 10px;
+      background-color: lighten($primary-color, 50%);
+    }
+  }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Sass Essentials</h1>
+    </header>
+    <main>
+        <section class="about">
+            <h2>About Sass</h2>
+            <p>Sass makes CSS more powerful with features like variables, mixins, and nesting.</p>
+        </section>
+        <section class="features">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Variables</li>
+                <li>Mixins</li>
+                <li>Nesting</li>
+            </ul>
+        </section>
+        <section class="example">
+            <h2>Example</h2>
+            <p class="example-text">This text will be styled using Sass.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2035 Sass Essentials</p>
+    </footer>
+</body>
+</html>
