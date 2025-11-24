@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Pedir datos al usuario
+const num1 = parseFloat(prompt("Ingresa el primer número: "));
+const num2 = parseFloat(prompt("Ingresa el segundo número: "));
+const operacion = prompt("Elige (+, -, *, /): ");
+
+let resultado;
+
+switch (operacion) {
+    case "+":
+        resultado = num1 + num2;
+        break;
+    case "-":
+        resultado = num1 - num2;
+        break;
+    case "*":
+        resultado = num1 * num2;
+        break;
+    case "/":
+        resultado = num1 / num2;
+        break;
+    default:
+        console.log("Operación no válida.");
+        break;
+}
+
+console.log(`Resultado: ${resultado}`);
+
+    </script>
+</body>
+</html>
