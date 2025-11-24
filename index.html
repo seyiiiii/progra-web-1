@@ -1,103 +1,79 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Menú de Prácticas</title>
-<style>
-/* --- ESTILOS GENERALES --- */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #0a0a0a, #1b1b1b, #121212);
-  color: #f1f1f1;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-/* --- TÍTULO CON EFECTO DE GRADIENTE --- */
-h1 {
-  margin-top: 60px;
-  font-size: 2.5em;
-  background: linear-gradient(90deg, #00bcd4, #3f51b5, #00bcd4);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: moverColor 4s infinite linear;
-}
-
-@keyframes moverColor {
-  0% { background-position: 0%; }
-  100% { background-position: 200%; }
-}
-
-/* --- MENÚ FIJO ABAJO --- */
-nav {
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  width: 100%;
-}
-
-/* --- ENLACES DEL MENÚ --- */
-nav a {
-  color: #f1f1f1;
-  text-decoration: none;
-  margin: 0 25px;
-  font-size: 1.1em;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Efecto subrayado animado */
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background: #00bcd4;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-/* Hover: color y subrayado */
-nav a:hover {
-  color: #00bcd4;
-}
-nav a:hover::after {
-  width: 100%;
-}
-
-/* --- EFECTO SUTIL DE BRILLO AL PASAR EL MOUSE --- */
-nav a:hover {
-  text-shadow: 0 0 10px #00bcd4;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Prácticas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#practicas">Prácticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><div id="inicio" class="container-fluid bg-dark text-center text-light py-5">
+    <h1 class="display-4">Portafolio de Prácticas</h1>
+    <p class="lead">Compilación de prácticas y proyectos</p>
+</div>
 
-<h1>Menú de Prácticas</h1>
+<div id="practicas" class="container my-5">
+    <h2 class="text-center mb-4">Prácticas 1 - 20</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"><a href="reto1.html" target="_blank" class="btn btn-success w-100">Práctica 1</a></div>
+        <div class="col"><a href="reto2.html" target="_blank" class="btn btn-success w-100">Práctica 2</a></div>
+        <div class="col"><a href="proyecto1_final.html" target="_blank" class="btn btn-success w-100">Práctica 3</a></div>
+        <div class="col"><a href="proyecto2_final.html" target="_blank" class="btn btn-success w-100">Práctica 4</a></div>
+        <div class="col"><a href="proyecto3_final.html" target="_blank" class="btn btn-success w-100">Práctica 5</a></div>
+        <div class="col"><a href="ejercicio3.html" target="_blank" class="btn btn-success w-100">Práctica 6</a></div>
+        <div class="col"><a href="ejercicio4.html" target="_blank" class="btn btn-success w-100">Práctica 7</a></div>
+        <div class="col"><a href="ejercicio5.html" target="_blank" class="btn btn-success w-100">Práctica 8</a></div>
+        <div class="col"><a href="practica10.html" target="_blank" class="btn btn-success w-100">Práctica 9</a></div>
+        <div class="col"><a href="cierremodulo7.html" target="_blank" class="btn btn-success w-100">Práctica 10</a></div>
+        <div class="col"><a href="practica11.html" target="_blank" class="btn btn-success w-100">Práctica 11</a></div>
+        <div class="col"><a href="practica12.html" target="_blank" class="btn btn-success w-100">Práctica 12</a></div>
+        <div class="col"><a href="practica13.html" target="_blank" class="btn btn-success w-100">Práctica 13</a></div>
+        <div class="col"><a href="practica14.html" target="_blank" class="btn btn-success w-100">Práctica 14</a></div>
+        <div class="col"><a href="practica15.html" target="_blank" class="btn btn-success w-100">Práctica 15</a></div>
+        <div class="col"><a href="practica16.html" target="_blank" class="btn btn-success w-100">Práctica 16</a></div>
+        <div class="col"><a href="practica17.html" target="_blank" class="btn btn-success w-100">Práctica 17</a></div>
+        <div class="col"><a href="practica18.html" target="_blank" class="btn btn-success w-100">Práctica 18</a></div>
+        <div class="col"><a href="practica19.html" target="_blank" class="btn btn-success w-100">Práctica 19</a></div>
+        <div class="col"><a href="practica20.html" target="_blank" class="btn btn-success w-100">Práctica 20</a></div>
+    </div>
+</div>
 
-<nav>
-  <a href="reto1.html" target="_blank">Reto 1</a>
-  <a href="reto2.html" target="_blank">Reto 2</a>
-  <a href="proyecto1_final.html" target="_blank">Projecto Xant 1</a>
-  <a href="proyecto2_final.html" target="_blank">Projecto Xant 2</a>
-  <a href="proyecto3_final.html" target="_blank">Projecto Xant 3</a>
-  <a href="ejercicio3.html" target="_blank">Práctica 3</a>
-  <a href="ejercicio4.html" target="_blank">Práctica 4</a>
-  <a href="ejercicio5.html" target="_blank">Práctica 5</a>
-  <a href="practica10.html" target="_blank">Práctica 10</a>
-  <a href="cierremodulo7.html" target="_blank">cierre modulo 7</a>
-</nav>
+<div id="contacto" class="container my-5">
+    <h2 class="text-center mb-4">Contacto</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="email" placeholder="Tu correo">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</div>
+
+<footer class="bg-dark text-center text-light py-4 border-top border-light">
+    <p>© 2024 Portafolio</p>
+</footer>
 
 </body>
 </html>
