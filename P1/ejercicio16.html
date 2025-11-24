@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="ejericio0.html" class="boton-home">Home</a>
+
+<style>
+  .boton-home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .boton-home:hover {
+    background-color: #afafaf;
+    color: black;
+  }
+</style>
+    <h1>FORMULARIOS</h1>
+    <form action="mailto: 185700@upslp.edu.mx" method="POST">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  
+  <p>Choose your meal preference:</p>
+  <label for="vegetarian">Vegetarian</label>
+  <input type="radio" id="vegetarian" name="meal" value="vegetarian" required>
+  <label for="non-vegetarian">Non-Vegetarian</label>
+  <input type="radio" id="non-vegetarian" name="meal" value="non-vegetarian" required>
+  <br>
+  
+  <p>Select the workshops you'd like to attend:</p>
+  <label for="workshop1">Workshop 1</label>
+  <input type="checkbox" id="workshop1" name="workshop1">
+  <label for="workshop2">Workshop 2</label>
+  <input type="checkbox" id="workshop2" name="workshop2">
+  <label for="workshop3">Workshop 3</label>
+  <input type="checkbox" id="workshop3" name="workshop3">
+  <br>
+  
+  <input type="submit" value="Register">
+</form>
+
+</body>
+</html>

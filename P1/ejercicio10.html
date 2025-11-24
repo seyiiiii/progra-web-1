@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USO DE LISTAS</title>
+    </head>
+    <body>
+        <a href="ejericio0.html" class="boton-home">Home</a>
+
+<style>
+  .boton-home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .boton-home:hover {
+    background-color: #afafaf;
+    color: black;
+  }
+</style>
+        <h1>USO DE LISTAS</h1>
+        <table border="1">
+            <tr>
+                <th>codigo lista</th>
+                <th>descripcion</th>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>La libertad de usar el programa, con cualquier propósito.</li>
+                        <li>La libertad de estudiar cómo funciona el programa y adaptarlo a tus necesidades.</li>
+                        <li>La libertad de distribuir copias del programa.</li>
+                        <li>La libertad de mejorar el programa y hacer públicas las mejoras a los demás.</li>
+                    </ol>
+                </td>
+                <td>lista ordenada</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>La libertad de usar el programa, con cualquier propósito.</li>
+                        <li>La libertad de estudiar cómo funciona el programa y adaptarlo a tus necesidades.</li>
+                        <li>La libertad de distribuir copias del programa.</li>
+                        <li>La libertad de mejorar el programa y hacer públicas las mejoras a los demás.</li>
+                    </ul>
+                </td>
+                <td>lista no ordenada</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol type="I">
+                        <li>La libertad de usar el programa, con cualquier propósito.</li>
+                        <li>La libertad de estudiar cómo funciona el programa y adaptarlo a tus necesidades.</li>
+                        <li>La libertad de distribuir copias del programa.</li>
+                        <li>La libertad de mejorar el programa y hacer públicas las mejoras a los demás.</li>
+                    </ol>
+                </td>
+                <td>lista con numeros romanos</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol reversed>
+                        <li>La libertad de usar el programa, con cualquier propósito.</li>
+                        <li>La libertad de estudiar cómo funciona el programa y adaptarlo a tus necesidades.</li>
+                        <li>La libertad de distribuir copias del programa.</li>
+                        <li>La libertad de mejorar el programa y hacer públicas las mejoras a los demás.</li>
+                    </ol>
+                </td>
+                <td>lista ordenada de forma descendente</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol start="100">
+                        <li>La libertad de usar el programa, con cualquier propósito.</li>
+                        <li>La libertad de estudiar cómo funciona el programa y adaptarlo a tus necesidades.</li>
+                        <li>La libertad de distribuir copias del programa.</li>
+                        <li>La libertad de mejorar el programa y hacer públicas las mejoras a los demás.</li>
+                    </ol>
+                </td>
+                <td>lista ordenada comenzando con 100</td>
+            </tr>
+            <tr>
+                <td>
+                    <dl>
+                        <dt>software</dt>
+                        <dd>Conjunto de programas, instrucciones y reglas informáticas para ejecutar ciertas tareas en una computadora.</dd>
+                        <dt>libre</dt>
+                        <dd>Que tiene facultad para obrar o no obrar.</dd>
+                        <dd>Que no es esclavo.</dd>
+                        <dd>Que no está preso.</dd>
+                        <dd>Licencioso,</dd>
+                    </dl>
+                </td>
+                <td>lista de definiciones</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Ítem 1
+                            <ol>
+                            <li>Ítem 1 de sublista
+                                <ul>
+                                <li>Ítem 1 de sub-sublista</li>
+                                <li>Ítem 2 de sub-sublista</li>
+                                </ul>
+                            </li>
+                            <li>Ítem 2 de sublista
+                                <ol>
+                                <li>Ítem 1 de sub-sublista</li>
+                                <li>Ítem 2 de sub-sublista</li>
+                                </ol>
+                            </li>
+                            <li>Ítem 3 de sublista</li>
+                            <li>Ítem 4 de sublista</li>
+                            </ol>
+                        </li>
+                        <li>Ítem 2
+                            <ul>
+                            <li>Ítem 1 de sublista</li>
+                            <li>Ítem 2 de sublista</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+                <td>lista de listas</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>Ítem 1
+                            <ol>
+                            <li>Ítem 1 de sublista
+                                <ol>
+                                <li>Ítem 1 de sub-sublista</li>
+                                <li>Ítem 2 de sub-sublista</li>
+                                </ol>
+                            </li>
+                            <li>Ítem 2 de sublista
+                                <ol>
+                                <li>Ítem 1 de sub-sublista</li>
+                                <li>Ítem 2 de sub-sublista</li>
+                                </ol>
+                            </li>
+                            <li>Ítem 3 de sublista</li>
+                            <li>Ítem 4 de sublista</li>
+                            </ol>
+                        </li>
+                        <li>Ítem 2
+                            <ol>
+                            <li>Ítem 1 de sublista</li>
+                            <li>Ítem 2 de sublista</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+                <td>listas de listas ordenadas</td>
+            </tr>
+        </table>
+    </body>
+</html>

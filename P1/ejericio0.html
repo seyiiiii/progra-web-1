@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU</title>
+
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contenedor-imagen {
+      max-width: 50%;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-imagen">
+    <img src="media/imagenes/portafolio.png" alt="portafolio" usemap="#portafolio" id="imagen">
+    <map name="portafolio">
+      <area shape="rect" coords="88,455,288,652" alt="pagina" href="pagina.html">
+      <area shape="rect" coords="303,456,506,648" alt="ejercicio2" href="ejercicio2.html">
+      <area shape="rect" coords="519,457,722,648" alt="ejercicio3" href="ejercicio3.html">
+      <area shape="rect" coords="735,456,940,648" alt="ejercicio4" href="ejercicio4.html">
+      <area shape="rect" coords="87,662,289,852" alt="Computer" href="ejercicio5.html">
+      <area shape="rect" coords="302,662,307,852" alt="Computer" href="ejercicio6.html">
+      <area shape="rect" coords="518,659,724,852" alt="Computer" href="ejercicio7.html">
+      <area shape="rect" coords="753,661,939,853" alt="Computer" href="ejercicio8.html">
+      <area shape="rect" coords="88,865,287,1053" alt="Computer" href="ejercicio9.html">
+      <area shape="rect" coords="302,863,506,1056" alt="Computer" href="ejercicio10.html">
+      <area shape="rect" coords="518,865,723,1055" alt="Computer" href="ejercicio11.html">
+      <area shape="rect" coords="735,866,940,1054" alt="Computer" href="media/sistema_solar.html">
+      <area shape="rect" coords="87,1068,288,1257" alt="Computer" href="ejercicio13.html">
+      <area shape="rect" coords="302,1068,505,1259" alt="Computer" href="ejercicio14.html">
+      <area shape="rect" coords="519,1068,722,1257" alt="Computer" href="ejercicio15.html">
+      <area shape="rect" coords="734,1066,938,1258" alt="Computer" href="ejercicio16.html">
+    </map>
+  </div>
+
+  <!-- Librería para escalar el mapa -->
+  <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    window.onload = function () {
+      imageMapResize();
+    };
+  </script>
+
+</body>
+</html>
