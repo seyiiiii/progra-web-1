@@ -1,164 +1,259 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Prácticas</title>
+    <title>Portafolio de Programación Avanzado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <style>
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background: #0a0a0f;
-        margin: 0;
-        padding: 30px;
-        color: #e5e5e5;
-        text-align: center;
-    }h1 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #b8c6ff;
-    text-shadow: 0 0 15px #3c4b8f;
-    font-weight: 600;
-}
+        /* Variables para manejo fácil de colores */
+        :root {
+            --bg-dark: #0A0A0F;
+            --bg-card: #1C1C27;
+            --text-light: #E0E0FF;
+            --accent-blue: #7081FF;
+            --accent-dark-blue: #4B598F;
+            --shadow-color: rgba(0, 0, 0, 0.7);
+        }
 
-/* Contenedor mucho más limpio y organizado */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 35px;
-    padding: 10px 20px;
-}
+        body {
+            font-family: 'Inter', sans-serif; /* Fuente moderna */
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden; /* Previene scroll horizontal */
+            /* Agregamos un fondo sutil de "Grid" o "Noise" para textura */
+            background-image: radial-gradient(circle at center, rgba(255,255,255,0.01) 1px, transparent 1px), 
+                              linear-gradient(to right, rgba(255,255,255,0.01) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
 
-/* Nueva card más elegante, obscura y profesional */
-.card {
-    background: #13131a;
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid rgba(255,255,255,0.05);
-}
+        /* ------------------- Encabezado y Títulos ------------------- */
+        .header-title {
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-shadow: 0 0 20px var(--accent-dark-blue);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.75);
-}
+        .subtitle {
+            font-size: 1.5rem;
+            color: #A0A0FF;
+            margin-bottom: 20px;
+        }
 
-.card img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
-}
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.card-title {
-    font-size: 20px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    color: #d7d7ff;
-}
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
 
-.card a {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 17px;
-    padding: 10px 22px;
-    background: #2d2d42;
-    color: #dcdcff;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.2s ease;
-    border: 1px solid rgba(255,255,255,0.1);
-}
+        .logo-img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
 
-.card a:hover {
-    background: #3f3f5c;
-    transform: scale(1.05);
-}
+        /* ------------------- Botones Principales ------------------- */
+        .big-btn {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
 
-/* Botones P1 y P2 más discretos pero elegantes */
-.big-btn {
-    display: block;
-    width: 70%;
-    margin: 30px auto;
-    padding: 18px;
-    font-size: 24px;
-    font-weight: 600;
-    background: #222233;
-    color: #cfcfff;
-    border-radius: 18px;
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-    transition: 0.25s ease;
-}
+        /* Estilo para el Parcial 1 */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-dark-blue));
+            color: var(--text-light);
+            box-shadow: 0 4px 15px rgba(112, 129, 255, 0.4);
+        }
 
-.big-btn:hover {
-    transform: scale(1.04);
-    background: #2d2d44;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
+        .btn-primary-custom:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(112, 129, 255, 0.6);
+        }
 
-</style>
+        /* Estilo para el Parcial 2 */
+        .btn-secondary-custom {
+            background-color: #38385A;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-secondary-custom:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-color: #48486E;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 4rem 0;
+        }
+
+        /* ------------------- Tarjetas de Prácticas ------------------- */
+        .section-title {
+            color: var(--accent-blue);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .card-portfolio {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 0;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid transparent;
+            overflow: hidden;
+            position: relative; /* Para el efecto de "borde" con pseudoelemento */
+        }
+
+        /* Efecto de borde brillante al pasar el ratón */
+        .card-portfolio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            padding: 1px; /* El ancho del borde */
+            background: linear-gradient(45deg, #4B598F, transparent, #4B598F);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .card-portfolio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .card-portfolio:hover::before {
+            opacity: 1;
+        }
+
+        .card-link {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-light);
+            text-decoration: none;
+            background-color: transparent;
+            border-radius: 10px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            z-index: 2; /* Asegura que el texto esté por encima del borde */
+            position: relative;
+        }
+
+        .card-portfolio:hover .card-link {
+            color: var(--accent-blue);
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        /* ------------------- Pie de Página ------------------- */
+        .footer-custom {
+            background-color: #101018;
+            color: #9999AA;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ------------------- Animación de Entrada (usada por JS) ------------------- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body><!-- Carrusel de fondo estilo Apple --><div id="bgCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.unsplash.com/photo-1527443224154-9f9c0a0f0a3c" class="d-block w-100" style="object-fit: cover; height: 100vh; opacity: 0.35;" />
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="d-block w-100" style="object-fit: cover; height: 100vh; opacity: 0.35;" />
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="d-block w-100" style="object-fit: cover; height: 100vh; opacity: 0.35;" />
-    </div>
-  </div>
-</div><h1 class="display-4 fade-in">Portafolio Final de Programación</h1>
-    <p class="lead fade-in">HTML • CSS • JavaScript</p><div class="mt-4 fade-in d-flex justify-content-center gap-3">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="logo-img">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="logo-img">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="logo-img">
-</div>
-
-<div class="container mt-5">
-    <div class="row justify-content-center g-4">
-        <div class="col-md-4 fade-in">
-            <a href="P1/index.html" class="btn big-btn w-100">Portafolio Parcial 1</a>
+<body>
+    
+    <header class="text-center py-5">
+        <h1 class="display-3 header-title">Portafolio Final de Programación</h1>
+        <p class="lead subtitle">HTML • CSS • JavaScript</p>
+        <div class="mt-4 logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="logo-img" alt="HTML5 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="logo-img" alt="CSS3 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="logo-img" alt="JavaScript Logo">
         </div>
-        <div class="col-md-4 fade-in">
-            <a href="P2/index.html" class="btn big-btn w-100">Portafolio Parcial 2</a>
-        </div>
+    </header>
+
+    <div class="container main-content">
+        <section class="partial-btns mb-5">
+            <div class="row justify-content-center g-4">
+                <div class="col-md-5">
+                    <a href="P1/index.html" class="btn big-btn btn-primary-custom w-100 shadow-lg">Portafolio Parcial 1</a>
+                </div>
+                <div class="col-md-5">
+                    <a href="P2/index.html" class="btn big-btn btn-secondary-custom w-100 shadow-lg">Portafolio Parcial 2</a>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="divider">
+
+        <section id="practicas" class="my-5">
+            <h2 class="text-center mb-5 section-title">Prácticas 1 - 20</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" data-aos="fade-up">
+
+                <div class="col card-col" data-index="1"><div class="card card-portfolio"><a href="reto1.html" target="_blank" class="card-link">Reto 1</a></div></div>
+                <div class="col card-col" data-index="2"><div class="card card-portfolio"><a href="reto2.html" target="_blank" class="card-link">Reto 2</a></div></div>
+                <div class="col card-col" data-index="3"><div class="card card-portfolio"><a href="proyecto1_final.html" target="_blank" class="card-link">Proyecto Xant 1</a></div></div>
+                <div class="col card-col" data-index="4"><div class="card card-portfolio"><a href="proyecto2_final.html" target="_blank" class="card-link">Proyecto Xant 2</a></div></div>
+                <div class="col card-col" data-index="5"><div class="card card-portfolio"><a href="proyecto3_final.html" target="_blank" class="card-link">Proyecto Xant 3</a></div></div>
+                <div class="col card-col" data-index="6"><div class="card card-portfolio"><a href="ejercicio3.html" target="_blank" class="card-link">Práctica 3</a></div></div>
+                <div class="col card-col" data-index="7"><div class="card card-portfolio"><a href="ejercicio4.html" target="_blank" class="card-link">Práctica 4</a></div></div>
+                <div class="col card-col" data-index="8"><div class="card card-portfolio"><a href="ejercicio5.html" target="_blank" class="card-link">Práctica 5</a></div></div>
+                <div class="col card-col" data-index="9"><div class="card card-portfolio"><a href="practica10.html" target="_blank" class="card-link">Práctica 10</a></div></div>
+                <div class="col card-col" data-index="10"><div class="card card-portfolio"><a href="cierremodulo7.html" target="_blank" class="card-link">Cierre Módulo 7</a></div></div>
+                <div class="col card-col" data-index="11"><div class="card card-portfolio"><a href="practica11.html" target="_blank" class="card-link">Práctica 11</a></div></div>
+                <div class="col card-col" data-index="12"><div class="card card-portfolio"><a href="practica12.html" target="_blank" class="card-link">Práctica 12</a></div></div>
+                <div class="col card-col" data-index="13"><div class="card card-portfolio"><a href="practica13.html" target="_blank" class="card-link">Práctica 13</a></div></div>
+                <div class="col card-col" data-index="14"><div class="card card-portfolio"><a href="practica14.html" target="_blank" class="card-link">Práctica 14</a></div></div>
+                <div class="col card-col" data-index="15"><div class="card card-portfolio"><a href="practica15.html" target="_blank" class="card-link">Práctica 15</a></div></div>
+                <div class="col card-col" data-index="16"><div class="card card-portfolio"><a href="practica16.html" target="_blank" class="card-link">Práctica 16</a></div></div>
+                <div class="col card-col" data-index="17"><div class="card card-portfolio"><a href="practica17.html" target="_blank" class="card-link">Práctica 17</a></div></div>
+                <div class="col card-col" data-index="18"><div class="card card-portfolio"><a href="practica18.html" target="_blank" class="card-link">Práctica 18</a></div></div>
+                <div class="col card-col" data-index="19"><div class="card card-portfolio"><a href="practica19.html" target="_blank" class="card-link">Práctica 19</a></div></div>
+                <div class="col card-col" data-index="20"><div class="card card-portfolio"><a href="practica20.html" target="_blank" class="card-link">Práctica 20</a></div></div>
+
+            </div>
+        </section>
     </div>
-</div>
 
-</div><div id="practicas" class="container my-5">
-    <h2 class="text-center mb-4 fade-in">Prácticas 1 - 20</h2><div class="row row-cols-1 row-cols-md-3 g-4">
+    <footer class="text-center py-4 footer-custom">
+        <p>© 2024 Portafolio Final. Desarrollado con 💙.</p>
+    </footer>
 
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="reto1.html" target="_blank" class="btn btn-success w-100">Reto 1</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="reto2.html" target="_blank" class="btn btn-success w-100">Reto 2</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="proyecto1_final.html" target="_blank" class="btn btn-success w-100">Proyecto Xant 1</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="proyecto2_final.html" target="_blank" class="btn btn-success w-100">Proyecto Xant 2</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="proyecto3_final.html" target="_blank" class="btn btn-success w-100">Proyecto Xant 3</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="ejercicio3.html" target="_blank" class="btn btn-success w-100">Práctica 3</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="ejercicio4.html" target="_blank" class="btn btn-success w-100">Práctica 4</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="ejercicio5.html" target="_blank" class="btn btn-success w-100">Práctica 5</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica10.html" target="_blank" class="btn btn-success w-100">Práctica 10</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="cierremodulo7.html" target="_blank" class="btn btn-success w-100">Cierre Módulo 7</a></div></div>
-
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica11.html" target="_blank" class="btn btn-success w-100">Práctica 11</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica12.html" target="_blank" class="btn btn-success w-100">Práctica 12</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica13.html" target="_blank" class="btn btn-success w-100">Práctica 13</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica14.html" target="_blank" class="btn btn-success w-100">Práctica 14</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica15.html" target="_blank" class="btn btn-success w-100">Práctica 15</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica16.html" target="_blank" class="btn btn-success w-100">Práctica 16</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica17.html" target="_blank" class="btn btn-success w-100">Práctica 17</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica18.html" target="_blank" class="btn btn-success w-100">Práctica 18</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica19.html" target="_blank" class="btn btn-success w-100">Práctica 19</a></div></div>
-    <div class="col fade-in"><div class="card card-portfolio p-3 text-center"><a href="practica20.html" target="_blank" class="btn btn-success w-100">Práctica 20</a></div></div>
-
-</div>
-
-</div><footer class="bg-black text-center text-light py-4 border-top border-light">
-    <p>© 2024 Portafolio Final</p>
-</footer></body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> </body>
 </html>
