@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(11, 129, 145);
+}
+
+h1{
+    margin: 0;
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+}
+h2{
+ margin: 0 0 10px 0;
+ font-size: 1.5em;
+}
+.intro{
+
+ border-radius: 30px;
+ margin-left: 15%;
+ margin-right: 15%;
+ padding: 20px;
+}
+
+.b1, .b2, .b3, .b4 {
+ color: black;
+ margin-left: 5%;
+ margin-right: 5%;
+ padding: 10px;
+ background-color: white;
+}
+
+.b1, .b3 {
+ border: rgb(224, 69, 7) 10px solid; 
+}
+.b2, .b4 {
+ border: rgb(231, 194, 45) 10px solid;
+}
+
+.contenedor-contenido {
+ display: flex;
+ align-items: flex-start;
+ gap: 20px;
+}
+
+.contenido-texto {
+ flex-grow: 1;
+ padding: 10px;
+}
+
+.contenido-imagen {
+ flex-shrink: 0;
+ width: 250px;
+}
+
+.b1 .contenedor-contenido, .b3 .contenedor-contenido {
+ flex-direction: row-reverse;
+}
+
+.b2 .contenedor-contenido, .b4 .contenedor-contenido {
+ flex-direction: row;
+}
+
+.contenido-imagen img {
+ display: block;
+ width: 100%;
+ height: auto;
+ border: 5px solid rgb(230, 189, 27);
+ box-shadow: 0 0 0 5px rgb(224, 69, 7); 
+}
+
+.b2 .contenido-imagen img, .b4 .contenido-imagen img {
+ box-shadow: 0 0 0 5px rgb(230, 189, 27);
+ border: 5px solid rgb(224, 69, 7);
+}

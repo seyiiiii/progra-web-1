@@ -1,0 +1,53 @@
+body{
+    background-color: green;
+    font-family: sans-serif;
+    font-size: 1.25rem;
+}
+
+h1{ 
+    color: white;
+    text-align: left;
+    text-shadow: black 5px 5px;
+    text-transform: uppercase;
+}
+#blanco{
+    border: black 10px solid;
+    border-radius: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 20px;
+    background-color: white;
+
+}
+.rojo{
+    color: white;
+    border: rgb(68, 8, 8) 10px solid;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius:  30px;
+    margin-left: 0%;
+    margin-right: 50%;
+    padding: 20px;
+    background-color: rgb(172, 50, 50);
+
+}
+.amarillo{
+    color: white;
+    border: rgb(151, 130, 11) 10px solid;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 50%;
+    margin-right: 0%;
+    padding: 10px;
+    background-color: rgb(206, 206, 74);
+
+}
+.azul{
+    color: white;
+    border: rgb(180, 180, 226) 5px dashed;
+    
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 20px;
+    background-color: blue;
+
+}

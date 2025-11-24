@@ -1,0 +1,86 @@
+body {
+  background-color:hwb(0 80% 20%);
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+p#m1 {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  border: hwb(40 20% 50%) 2px solid;
+  background-color: hwb(40 50% 0%);
+  text-align: center;
+}
+
+p#m2 {
+  position: absolute;
+  top: 40%;
+  left: 32%;
+  width: 35%;
+  height: 30%;
+  z-index: 2;
+  border: hwb(120 20% 50%)4px solid;
+  background-color: hwb(120 50% 0%);
+  text-align: center;
+}
+
+p#m3 {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 35%;
+  height: 25%;
+  border: hwb(60 25% 15%) 4px solid;
+  background-color: hwb(60 50% 0%);
+  text-align: left;
+}
+
+p#m4 {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 35%;
+  height: 25%;
+  border: hwb(180 60% 20%) 4px solid;
+  background-color: hwb(180 80% 0%);
+  text-align: right;
+}
+
+p#m5 {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 35%;
+  height: 25%;
+  border: hwb(300 65% 25%) 4px solid;
+  background-color: hwb(300 90% 0%);
+  text-align: left;
+}
+
+p#m6 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 35%;
+  height: 25%;
+  border: hwb(0 40% 50%) 4px solid;
+  background-color: hwb(0 70% 0%);
+  text-align: right;
+}
+
+p:hover {
+  z-index: 3;
+}

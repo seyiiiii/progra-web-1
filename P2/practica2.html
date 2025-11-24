@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML y CSS</title>
+    <style>
+        body {
+            margin: 10px 10%;
+            background-color: lightgray;
+            font-family: sans-serif;
+            text-align: justify;
+        }
+        h1 {
+            font-size: 300%;
+            letter-spacing: 10px;
+            text-align: center;
+        }
+        h2 {
+            clear: both;
+            padding: 0.2rem 0.5rem;
+            background-color: gray;
+            color: white;
+            font-size: 200%;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        p {
+            margin: 0;
+            text-indent: 2rem;
+            flex: 1;
+        }
+        iframe {
+            width: 90px;
+            height: 90px;
+            border: none;
+            flex-shrink: 0;
+        }
+        strong {
+            background-color: white;
+        }
+
+        em {
+            color: red;
+        }
+
+        .section-header {
+            font-size: 200%;
+            background-color: gray;
+            color: white;
+            padding: 0.2rem 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML y CSS</h1>
+    <div class="section">
+        <div class="section-header">HTML</div>
+        <div class="content">
+            <iframe src="html-5logo.svg"></iframe>
+            <p>
+                Entre 1995 y 2001 el W3C normalizó y desarrolló el HTML a través de varias versiones (HTML 2, 3, 4, XHTML 1.0). 
+                Pero su apuesta radical por el XML provocó en 2004 la creación del WHATWG por parte de los fabricantes de navegadores 
+                para continuar el desarrollo del HTML "clásico". En 2007 el W3C reconoció el fracaso del XML e intentó reintegrar el trabajo 
+                del WHATWG. Así, en <span class="resaltado">octubre de 2014</span> el W3C aprobó la <b>recomendación HTML 5</b>, 
+                seguida por el HTML 5.1 y el HTML 5.2 en 2016 y 2017.
+                <br><br>
+                Pero la verdad es que el desarrollo real del HTML ya sólo se producía en el WHATWG. Por ello, en mayo de 2019, 
+                el W3C acordó con el WHATWG dejar definitivamente en manos del WHATWG el desarrollo del HTML. 
+                El WHATWG no publica versiones de sus normas, sino que mantiene una norma única, HTML living standard, 
+                que se actualiza constantemente.
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">CSS</div>
+        <div class="content">
+            <iframe src="css3-logo.svg"></iframe>
+            <p>
+                En 1996 y 1998 el W3C aprobó las recomendaciones sobre hojas de estilo CSS 1 y CSS 2, 
+                pero a continuación el desarrollo de las CSS estuvo bloqueado casi diez años. 
+                En <b>2008</b> el W3C retomó el trabajo en la siguiente generación de hojas de estilo, 
+                las <b>recomendaciones CSS 3</b>, que se planificaron como un conjunto de recomendaciones en vez de como un documento único.
+                <br><br>
+                Pero el proceso está resultando mucho más largo de lo esperado y sólo algunas partes de CSS 3 ya están implementadas 
+                en los principales navegadores.
+            </p>
+        </div>
+    </div>
+     
+<footer style="text-align: center; margin-top: 2rem;">
+  <a href="https://jucamendez.github.io/menu/ej2p2.html" target="_blank"> Abrir como página web</a>
+</footer>
+
+
+</body>
+</html>

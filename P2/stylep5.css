@@ -1,0 +1,29 @@
+body {
+  background-color: hwb(35 80% 0%);
+  font-family: sans-serif;
+}
+
+h1 {
+  color: hwb(35 0% 40%);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 2rem;
+}
+
+p.intro {
+  color: hwb(35 0% 0%);
+}
+
+summary {
+  font-size: 4rem;
+}
+
+span.par {
+  background-color: white;
+}
+
+span.impar {
+  background-color: hwb(325 80% 0%);
+}

@@ -1,0 +1,132 @@
+/* --- Estilos Base --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; 
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* --- Contenedor de Prácticas --- */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Enlace clickeable */
+.link-proyecto {
+    text-decoration: none;
+    color: inherit;
+    flex-basis: 250px; 
+    max-width: 250px;
+    min-width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Ficha Individual --- */
+.ficha {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    min-height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilo Pixel-Art para los Emojis --- */
+.p1 {
+    font-size: 50px;
+    margin: 15px 0 5px 0;
+    line-height: 1;
+    text-shadow: 1px 1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
+    filter: contrast(120%) saturate(120%);
+}
+
+.p2 {
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.p3 {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    color: #555;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Media Queries --- */
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        background-color: #fffacd;
+        padding: 15px;
+    }
+    
+    .contenedor {
+        gap: 15px;
+    }
+    
+    .link-proyecto {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    body {
+        background-color: #add8e6;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .link-proyecto {
+        flex-basis: 95%; 
+        max-width: 95%;
+    }
+    
+    .p1 {
+        font-size: 40px;
+    }
+
+    .p3 {
+        font-size: 0.85em;
+    }
+}

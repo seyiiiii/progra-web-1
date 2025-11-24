@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(71, 148, 71);
+    font-family: sans-serif;
+
+.blanco {
+  color: rgb(255, 255, 255);
+  font-family:cursive;
+  font-style: oblique;
+  font-size: 10px;
+}
+
+.amarillo {
+  color:rgb(211, 200, 50);
+  font-size: 17px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.naranja {
+  color: rgb(209, 150, 23);
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.blanco {
+  color:rgb(255, 255, 255);
+  font-family:cursive;
+  font-style: oblique;
+  font-size: 10px;
+}
+
+.naranja {
+  color:rgb(209, 150, 23);
+  font-size: 19px;
+  font-family: 'Arial', sans-serif;
+}
+
+.rojo {
+  color: rgb(226, 16, 16);
+  font-size: 16px;
+  font-family: 'Lucida Console', monospace;
+}
+
+.amarillo {
+  color:rgb(211, 200, 50);
+  font-size: 16px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.rojo {
+  color: rgb(226, 16, 16);
+  font-size: 16px;
+  font-family: 'Calibri', sans-serif;
+}
+
+}
